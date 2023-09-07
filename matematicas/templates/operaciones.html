@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <title>Operaciones matemáticas básicas</title>
+</head>
+<body>
+    <h1>El resultado:</h1>
+    {% if op == "sumar" %}
+        <p>La suma de {{p1}} + {{p2}} = <span id="resultado"></span></p>
+        <script>
+            var resultado = {{p1}} + {{p2}};
+            document.getElementById('resultado').innerText = resultado;
+        </script>
+    {% elif op == "restar" %}
+        <p>La resta de {{p1}} - {{p2}} = <span id="resultado"></span></p>
+        <script>
+            var resultado = {{p1}} - {{p2}};
+            document.getElementById('resultado').innerText = resultado;
+        </script>
+    {% elif op == "multiplicar" %}
+        <p>La multiplicación de {{p1}} * {{p2}} = <span id="resultado"></span></p>
+        <script>
+            var resultado = {{p1}} * {{p2}};
+            document.getElementById('resultado').innerText = resultado;
+        </script>
+    {% elif op == "dividir" %}
+        <p>La división de {{p1}} / {{p2}} = <span id="resultado"></span></p>
+        <script>
+            var resultado = {{p1}} / {{p2}};
+            document.getElementById('resultado').innerText = resultado;
+        </script>
+    {% else %}
+        <p>Ingrese el operador o los valores adecuados para una operación matemática!</p>
+    {% endif %}
+</body>
+</html>
